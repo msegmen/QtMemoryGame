@@ -28,6 +28,9 @@ void MainWindow::buttonPressed() {
     QRegularExpressionMatch match = reg.match(button->objectName());
     int index = match.captured(0).toInt()-1;
 
+    if(isSecondItemSelected)
+        return;
+
     if(index == selectedIndex)
         return;
 
